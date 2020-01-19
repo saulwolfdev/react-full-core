@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react';
-import Tasks from './components/Tasks';
+import Formularios from './components/Formularios';
 
 class App extends Component {
 	constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
 	render() { 
 		return (
       <Fragment>
-		  <Tasks name={"price product"} price={10}/>
+		  <Formularios/>
       </Fragment>
     );
 	}

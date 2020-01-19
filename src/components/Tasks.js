@@ -73,7 +73,7 @@ class Tasks extends Component {
             <button onClick={this.agregar}>agregar</button>
             <button onClick={this.quitar}>quitar</button>
             <button onClick={this.limpiar}>limpiar</button>
-    <p>{this.props.price * this.state.price}</p>
+            <p>{this.props.price * this.state.price}</p>
           </div>
         </div>
       </Fragment>
