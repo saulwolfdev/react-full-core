@@ -1,6 +1,7 @@
-import React, { Component,Fragment } from 'react';
-class RequestAsync extends Component {
-	constructor(props) {
+import React, { Component } from 'react';
+// import axios from "axios"
+class RequestAxiosAsync extends Component {
+constructor(props) {
 		super(props);
 		this.state = { 
 			  movie: {},
@@ -12,10 +13,20 @@ class RequestAsync extends Component {
     e.preventDefault()
 	this.setState({loadingMovie:true})
     const title = e.target[0].value
-    const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=5c24385e'
-    fetch(url + '&t=' + title)
-      .then(res => res.json())
-      .then(movie => this.setState({ movie,loadingMovie:false }))
+    const url = 'http://www.omdbapi.com/?i=tt3896198&apikey=5c24385e';
+    // axios.get(url,{
+	// 	params:{
+	// 		t:title 
+	// 	}
+	// })
+    //   .then(res => this.setState({ movie:res.data,  loadingMovie:false }))
+
+  const res = await fetch(url + '&t=' + title);
+  const movie= await res.json()
+
+  this.setState({movie,loadingMovie:false})
+
+
   }
 	render() { 
 		console.log("Movie",this.state.movie)
@@ -42,5 +53,5 @@ class RequestAsync extends Component {
 		</Fragment>);
 	}
 }
- 
-export default RequestAsync;
+
+export default RequestAxiosAsync;

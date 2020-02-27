@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react';
-import RequestAsync from './components/PeticionesAsincronas';
+import RequestThen from './components/PeticionesPromesas';
 
 class App extends Component {
 	constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
 	render() { 
 		return (
       <Fragment>
-		  <RequestAsync/>
+		  <RequestThen/>
       </Fragment>
     );
 	}
