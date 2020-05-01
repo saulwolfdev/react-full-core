@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react';
-import RequestThen from './components/PeticionesPromesas';
+import ComunicacionInstancias from './components/ComunicacionInstancias';
 
 class App extends Component {
 	constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
 	render() { 
 		return (
       <Fragment>
-		  <RequestThen/>
+		  <ComunicacionInstancias/>
       </Fragment>
     );
 	}
